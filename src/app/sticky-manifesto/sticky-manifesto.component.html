@@ -1,0 +1,10 @@
+<div class="container" #containerRef>
+    <div class="left-data sticky-content">
+        <div class="circle"></div>
+        <p>Manifesto</p>
+    </div>
+    <div class="scroll-data">
+        <p *ngFor="let element of scrollElements" class="scroll-element">{{element}}</p>
+    </div>
+    <div class="highlight-text sticky-content"><span *ngFor="let text of textParts; let i = index" [ngClass]="{ 'activeColor': i === activeIndex }">{{text}}&nbsp;</span></div>
+</div>

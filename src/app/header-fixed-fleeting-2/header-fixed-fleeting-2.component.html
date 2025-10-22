@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="header-left-bars" (click)="showHeaderModal()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <p class="header-center-text">example</p>
+    <div class="header-right-options">
+        <p>example</p>
+        <i class="fa-solid fa-shop"></i>
+    </div>
+</div>
+<div #headerModal class="modal-options hidden">
+    <i class="fa-solid fa-xmark close" (click)="hideHeaderModal()"></i>
+    <div class="options-container">
+        <p class="title">main option</p>
+        <a class="option">text 1</a>
+    </div>
+    <div class="options-container">
+        <p class="title">alternatives</p>
+        <a class="option">text 1</a>
+        <a class="option">text 2</a>
+        <a class="option">text 3</a>
+        <a class="option">text 4</a>
+        <a class="option">text 5</a>
+    </div>
+    <div class="options-container">
+        <p class="title">second alternative</p>
+        <a class="option">text 1</a>
+    </div>
+    <div class="modal-footer">
+        <div class="main-footer-options">
+            <a class="option">option 1</a>
+            <a class="option">option 1</a>
+            <a class="option">option 1</a>
+            <a class="option">option 1</a>
+            <a class="option">option 1</a>
+        </div>
+        <div class="extra-options">
+            <p class="option">op1</p>
+            <p class="option">op2</p>
+        </div>
+    </div>
+</div>
+<div #headerModalbackground class="modal-background opacity-hidden" (click)="hideHeaderModal()"></div>

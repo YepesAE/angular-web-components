@@ -1,0 +1,22 @@
+<!-- Header example from https://distrategy.plastic.design/ -->
+<div #header class="container">
+    <div class="header-logo">
+        <p>Titulo</p>
+    </div>
+    <div class="header-content">
+        <p>Texto de ejemplo</p>
+        <div class="content-options">
+            <a>Overview</a>
+            <a>Agenda</a>
+            <a>Info</a>
+        </div>
+        <div class="content-options-mobile">
+            <i class="fa-solid fa-bars-staggered" (click)="toggleMobileHeader()"></i>
+        </div>
+        <div #mobileOptions class="expanded-mobile-options">
+            <a>Overview</a>
+            <a>Agenda</a>
+            <a>Info</a>
+        </div>
+    </div>
+</div>

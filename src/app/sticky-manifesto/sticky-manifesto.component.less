@@ -1,0 +1,53 @@
+@backgroundColor: black;
+@textColor: white;
+@darkenTextColor: grey;
+@elementsColor: blue;
+
+.container{
+    background-color: @backgroundColor;
+    color: @textColor;
+    max-width: 100%;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    padding: 0 50px;
+    div{
+        width: 33%;
+    }
+    .sticky-content{
+        padding-top: 50px;
+        position: sticky;
+        top: 50px;
+        height: 95vh;
+    }
+    .left-data{
+        display: flex;
+        gap: 15px;
+        font-size: 20px;
+        .circle{
+            transform: translateY(-4px);
+            width: 30px;
+            height: 30px;
+            border-radius: 15px;
+            background-color: @elementsColor;
+        }
+    }
+    .scroll-data{
+        p{
+            padding-top: 200px;
+            font-size: 250px;
+            padding-bottom: 200px;
+        }
+    }
+    .highlight-text{
+        font-size: min(2.3vw, 40px);
+        span{
+            transition: color 0.5s ease;
+            color: @textColor;
+            &.activeColor{
+            color: @elementsColor;
+        }
+        }
+        
+    }
+}
