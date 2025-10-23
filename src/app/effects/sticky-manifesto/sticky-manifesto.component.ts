@@ -1,5 +1,9 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollSmoother } from "gsap/ScrollSmoother";
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 @Component({
   selector: 'app-sticky-manifesto',
@@ -30,7 +34,8 @@ export class StickyManifestoComponent {
     const rect = this.containerRef.nativeElement.getBoundingClientRect();
     this.containerTop = rect.top + window.scrollY;
     this.containerHeight = this.containerRef.nativeElement.offsetHeight;
-  }
+    this.stickContent();
+  } 
 
   @HostListener('window:scroll', [])
   onWindowScroll(){
@@ -49,6 +54,22 @@ export class StickyManifestoComponent {
     }
     const index = Math.floor(progress * this.textParts.length);
     this.activeIndex = Math.min(Math.max(index, 0), this.textParts.length - 1);
+  }
+
+  stickContent(){
+    const container = document.querySelector(".sticky-manifesto");
+    
+    gsap.utils.toArray(".sticky-content").forEach((el: any) => {
+      ScrollTrigger.create({
+        trigger: el,
+        start: ".sticky-manifesto",
+        endTrigger: ".sticky-manifesto",
+        end: "bottom bottom",
+        pin: true,
+        pinSpacing: false,
+        // markers: true
+      });
+    });
   }
 
 }
