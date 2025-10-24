@@ -4,11 +4,12 @@ import { HeaderFixedFleeting1Component } from "../headers/header-fixed-fleeting-
 import { HeaderFixedFleeting2Component } from "../headers/header-fixed-fleeting-2/header-fixed-fleeting-2.component";
 import { StickyManifestoComponent } from "../effects/sticky-manifesto/sticky-manifesto.component";
 import { Layout1Component } from "../layouts/layout-1/layout-1.component";
+import { Footer1Component } from "../footers/footer-1/footer-1.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, HeaderFixedFleeting1Component, HeaderFixedFleeting2Component, StickyManifestoComponent, Layout1Component],
+  imports: [CommonModule, HeaderFixedFleeting1Component, HeaderFixedFleeting2Component, StickyManifestoComponent, Layout1Component, Footer1Component],
   templateUrl: './home.component.html',
   styleUrl: './home.component.less'
 })
