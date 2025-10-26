@@ -35,6 +35,7 @@ export class StickyManifestoComponent {
     this.containerTop = rect.top + window.scrollY;
     this.containerHeight = this.containerRef.nativeElement.offsetHeight;
     this.stickContent();
+    this.mobileTextAppear();
   } 
 
   @HostListener('window:scroll', [])
@@ -70,6 +71,10 @@ export class StickyManifestoComponent {
         // markers: true
       });
     });
+  }
+
+  mobileTextAppear(){
+
   }
 
 }
