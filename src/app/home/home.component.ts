@@ -5,11 +5,12 @@ import { HeaderFixedFleeting2Component } from "../headers/header-fixed-fleeting-
 import { StickyManifestoComponent } from "../effects/sticky-manifesto/sticky-manifesto.component";
 import { Layout1Component } from "../layouts/layout-1/layout-1.component";
 import { Footer1Component } from "../footers/footer-1/footer-1.component";
+import { SlidingInfiniteWordsComponent } from "../effects/sliding-infinite-words/sliding-infinite-words.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, HeaderFixedFleeting1Component, HeaderFixedFleeting2Component, StickyManifestoComponent, Layout1Component, Footer1Component],
+  imports: [CommonModule, HeaderFixedFleeting1Component, HeaderFixedFleeting2Component, StickyManifestoComponent, Layout1Component, Footer1Component, SlidingInfiniteWordsComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.less'
 })
