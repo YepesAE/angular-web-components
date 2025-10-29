@@ -1,6 +1,7 @@
+<!-- https://lunchbox.studiofreight.com/ -->
 <div class="container">
     <div *ngFor="let text of texts; index as i" class="sliding-texts">
-        <p [ngClass]="i % 2 == 0 ? 'right' : 'left'">{{text}}</p>
-        <p [ngClass]="i % 2 == 0 ? 'right' : 'left'">{{text}}</p>
+        <p [ngClass]="i % 2 == 0 ? 'right' : 'left'" [ngStyle]="{'animation-duration': getDuration(text) + 's'}">{{text}}&nbsp;</p>
+        <p [ngClass]="i % 2 == 0 ? 'right' : 'left'" [ngStyle]="{'animation-duration': getDuration(text) + 's'}">{{text}}&nbsp;</p>
     </div>
 </div>

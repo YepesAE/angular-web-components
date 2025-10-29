@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, HostListener } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, HostListener } from '@angular/core';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
   standalone: true,
   imports: [],
   templateUrl: './horizontal-scroll-indicator.component.html',
-  styleUrl: './horizontal-scroll-indicator.component.less'
+  styleUrl: './horizontal-scroll-indicator.component.less', 
 })
 export class HorizontalScrollIndicatorComponent implements AfterViewInit{
 
