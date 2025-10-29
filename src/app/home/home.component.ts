@@ -7,11 +7,12 @@ import { Layout1Component } from "../layouts/layout-1/layout-1.component";
 import { Footer1Component } from "../footers/footer-1/footer-1.component";
 import { SlidingInfiniteWordsComponent } from "../effects/sliding-infinite-words/sliding-infinite-words.component";
 import { Layout2Component } from "../layouts/layout-2/layout-2.component";
+import { Layout3Component } from "../layouts/layout-3/layout-3.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, HeaderFixedFleeting1Component, HeaderFixedFleeting2Component, StickyManifestoComponent, Layout1Component, Footer1Component, SlidingInfiniteWordsComponent, Layout2Component],
+  imports: [CommonModule, HeaderFixedFleeting1Component, HeaderFixedFleeting2Component, StickyManifestoComponent, Layout1Component, Footer1Component, SlidingInfiniteWordsComponent, Layout2Component, Layout3Component],
   templateUrl: './home.component.html',
   styleUrl: './home.component.less'
 })

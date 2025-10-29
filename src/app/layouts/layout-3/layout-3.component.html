@@ -1,0 +1,23 @@
+<!-- https://www.monads.ch/ -->
+<div class="container layout-3">
+    <div class="top">
+        <h1>SAP Team as a Service</h1>
+        <div class="top-right">
+            <p>We connect SAP seamlessly across your enterprise – combining consulting expertise and integration.</p>
+            <button>start your sap project &nbsp; <i class="fa-solid fa-up-right-from-square"></i></button>
+        </div>
+    </div>
+    <div class="bottom">
+        <div *ngFor="let info of infoList; index as i" class="information">
+            <div class="header" [ngClass]="{'title-hidden' : !this.infoList[i].shown}" (click)="toggleShownInformation(i)">
+                <div class="title">
+                    <div class="circle"></div>
+                    <p>{{info.title}}</p>  
+                </div>
+                <i class="fa-solid fa-arrow-up" [ngClass]="{'shown' : this.infoList[i].shown}"></i>
+            </div>
+            
+            <p class="content" [ngClass]="{'hidden' : !this.infoList[i].shown}">{{info.content}}</p>
+        </div>
+    </div>
+</div>
