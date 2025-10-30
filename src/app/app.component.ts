@@ -34,10 +34,5 @@ export class AppComponent implements AfterViewInit{
       effects: true,
       normalizeScroll: true
     });
-
-    gsap.utils.toArray<HTMLElement>('[data-speed]').forEach((el) => {
-      const speed = parseFloat(el.dataset['speed'] || '1');
-      this.smoother.effects(el, { speed });
-    });
   }
 }
