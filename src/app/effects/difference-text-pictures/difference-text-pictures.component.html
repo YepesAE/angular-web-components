@@ -1,5 +1,7 @@
 <!-- https://urbanjurgensen.com/ -->
 <div class="container">
-    <h1>Urban Jurgensen</h1>
-    <img *ngFor="let image of images" src={{image.src}} [ngStyle]="{'width': image.width, 'transform': image.transformX}" alt="">
+    <h1 id='titleDifference'>Urban Jurgensen</h1>
+    <div class="img-container">
+        <img class="difference-image" *ngFor="let image of images" src={{image.src}} [ngStyle]="{'width': image.width, 'float': image.pos}" alt="">
+    </div>
 </div>
